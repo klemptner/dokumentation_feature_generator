@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Entwicklungsprotokoll &mdash; Feature Generator  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Besprechungsnotizen" href="besprechungen.html" />
+    <link rel="prev" title="Docker Version of Feature Generator" href="README_app.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Feature Generator
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Package</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README_V1.html">Feature Generator <code class="docutils literal notranslate"><span class="pre">README</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README_V1.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README_V1.html#pipeline">Pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="README_V1.html#part-1">Part 1:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README_V1.html#part-2">Part 2:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Docker Image</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README_app.html">Docker Version of Feature Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README_app.html#installation-process">Installation Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="README_app.html#installation-of-docker-image">Installation of Docker-Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="README_app.html#pipeline-usage-scenario">Pipeline Usage Scenario</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Protokoll</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Entwicklungsprotokoll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recherche">Recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#topic-model">Topic Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-1">Iteration 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-2">Iteration 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-3">Iteration 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-4">Iteration 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-5">Iteration 5</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieve">Retrieve</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#r1">R1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r2">R2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r3">R3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#o1-1">O1_1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#o2">O2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#o3">O3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classify">Classify</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c1">C1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Besprechungen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="besprechungen.html">Besprechungsnotizen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="besprechungen.html#id1">02.02.2021</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="besprechungen.html#moegliche-problematiken">Moegliche Problematiken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="besprechungen.html#weiterfuehrung">Weiterfuehrung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Feature Generator</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Entwicklungsprotokoll</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/docs/protokoll.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="entwicklungsprotokoll">
+<h1>Entwicklungsprotokoll<a class="headerlink" href="#entwicklungsprotokoll" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="recherche">
+<h2>Recherche<a class="headerlink" href="#recherche" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="topic-model">
+<h2>Topic Model<a class="headerlink" href="#topic-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="iteration-1">
+<h3>Iteration 1<a class="headerlink" href="#iteration-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Artikel Embedding mit SentenceTransformer(‘T-Systems-onsite/cross-en-de-roberta-sentence-transformer’)<ul>
+<li>nur erste 1000 Artikel aus Effizienzgruenden</li>
+</ul>
+</li>
+<li>Dimensionalitätsreduktion mit UMAP<ul>
+<li>n_components=10, n_neighbors=18</li>
+</ul>
+</li>
+<li>Clustering mit HDBSCAN<ul>
+<li>Pro Artikel -&gt; Topic</li>
+<li>min_cluster_size=15, prediction_data=True, min_samples=6)</li>
+</ul>
+</li>
+<li>Visualisierung durch scatterplot mit bokeh
+<img alt="Cluster 1" src="../_images/cluster_1.jpg" /></li>
+</ul>
+</div>
+<div class="section" id="iteration-2">
+<h3>Iteration 2<a class="headerlink" href="#iteration-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Artikel Embedding mit SentenceTransformer(‘T-Systems-onsite/cross-en-de-roberta-sentence-transformer’)<ul>
+<li><strong>Artikelcharakteranzahl auf 800 limitiert</strong></li>
+<li><strong>Alle Artikel einbezogen</strong></li>
+</ul>
+</li>
+<li>Dimensionalitätsreduktion mit UMAP<ul>
+<li>n_components=10, n_neighbors=18</li>
+</ul>
+</li>
+<li>Clustering mit HDBSCAN<ul>
+<li>Pro Artikel -&gt; Topic</li>
+<li>min_cluster_size=15, prediction_data=True, min_samples=6)</li>
+</ul>
+</li>
+<li>Visualisierung durch scatterplot mit bokeh</li>
+</ul>
+</div>
+<div class="section" id="iteration-3">
+<h3>Iteration 3<a class="headerlink" href="#iteration-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>In I3_topicmodel_from_csv.ipynb werden Embeddings nun direkt aus copy_artikel_embedded_800 verwendet</li>
+<li>Output: I3_output_df.csv<ul>
+<li>Enthält zusätzlich die Wahrscheinlichkeiten der Clusterzugehörigkeit für jeden Artikel</li>
+</ul>
+</li>
+<li>Artikel Embedding mit SentenceTransformer(‘T-Systems-onsite/cross-en-de-roberta-sentence-transformer’)<ul>
+<li>Text pro Artikel auf 800 Zeichen limitiert (Durchschnittsparagraphenläne: 200 Wörter, Durschnittliches Deutsches Wort  durchschnittlich 5 Zeichen, ausgenommen space), dafür Limitation aus Iteration 1 von 1000 Artikeln aufgehoben und alle Artikel einbezogen -&gt; 9570 Kurzartikel</li>
+</ul>
+</li>
+<li>Dimensionalitätsreduktion mit UMAP<ul>
+<li>n_components=10, n_neighbors=18</li>
+</ul>
+</li>
+<li>Clustering mit HDBSCAN<ul>
+<li>Pro Artikel -&gt; Topic</li>
+<li>min_cluster_size=15, prediction_data=True, min_samples=6)
+<img alt="Cluster 2" src="../_images/cluster_2.jpg" />
+<img alt="Cluster 3" src="../_images/cluster_3.jpg" /></li>
+</ul>
+</li>
+<li><strong>Ranking (nach c TF IDF und TF) mithilfe von a für jedes einzele  Cluster erstellen</strong></li>
+</ul>
+</div>
+<div class="section" id="iteration-4">
+<h3>Iteration 4<a class="headerlink" href="#iteration-4" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="iteration-5">
+<h3>Iteration 5<a class="headerlink" href="#iteration-5" title="Permalink to this headline">¶</a></h3>
+<p>LDA
+<img alt="Plot 1" src="../_images/plot_1.jpg" /></p>
+</div>
+</div>
+<div class="section" id="retrieve">
+<h2>Retrieve<a class="headerlink" href="#retrieve" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="r1">
+<h3>R1<a class="headerlink" href="#r1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Semantische Suche (Retrieval)<ul>
+<li>Mit SentenceTransformer ‘T-Systems-onsite/cross-en-de-roberta-sentence-transformer’</li>
+<li>Top 10 Resultate ausgeben</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="r2">
+<h3>R2<a class="headerlink" href="#r2" title="Permalink to this headline">¶</a></h3>
+<p>Task: Schrittweise Verfeinerung der residuals</p>
+<ul class="simple">
+<li>Ausführung des Clusterings wie in I2, jedoch mit skimming approach nachdem qualitativ hochwertige Cluster abgeschöpft wurden, wird Clustering erneut mit neuen Parametern durchgeführt<ul>
+<li>Qualitativ Akzeptabel: 3 Iterationen (nachher Clusteringfähigkeit ausgeschöpft)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Labelled</span> <span class="mi">4454</span> <span class="n">successfully</span> <span class="ow">in</span> <span class="n">I0</span> 
+
+<span class="n">Segmented</span> <span class="n">into</span><span class="p">:</span> <span class="mi">83</span> <span class="n">Clusters</span><span class="o">.</span> 
+
+<span class="n">Labelled</span> <span class="mi">2055</span> <span class="n">successfully</span> <span class="ow">in</span> <span class="n">I1</span> 
+
+<span class="n">Segmented</span> <span class="n">into</span><span class="p">:</span> <span class="mi">38</span> <span class="n">Clusters</span><span class="o">.</span> 
+
+<span class="n">Labelled</span> <span class="mi">2950</span> <span class="n">successfully</span> <span class="ow">in</span> <span class="n">I2</span> 
+
+<span class="n">Segmented</span> <span class="n">into</span><span class="p">:</span> <span class="mi">3</span> <span class="n">Clusters</span><span class="o">.</span> 
+</pre></div>
+</div>
+<ul class="simple">
+<li>Baseline algorithmus für Vorschläge (eingegebene Keywords) implementiert.<ul>
+<li>Bewegung im Semantischen Raum, Epsilonhüllen Generierung und Ausgabe der Relevantesten Artikel</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="r3">
+<h3>R3<a class="headerlink" href="#r3" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="o1-1">
+<h3>O1_1<a class="headerlink" href="#o1-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Present each cluster (HDBSCAN and LDA) for annotation showing example texts, cTFIDF, TF</li>
+<li>user annotates clusters with own labels one by one in terminal</li>
+<li>Annotated clusters saved to 2 DFS<ul>
+<li>O1_df_annotation_hdbscan.csv</li>
+<li>O1_df_annotations_lda.csv</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="o2">
+<h3>O2<a class="headerlink" href="#o2" title="Permalink to this headline">¶</a></h3>
+<p>Use for annotating directly in csv table.</p>
+<ul class="simple">
+<li>Task: Prepare tables for annotation</li>
+<li>Annotated clusters saved to O2_df_annotation_hdbscan.csv and O2_df_annotation_lda.csv</li>
+</ul>
+</div>
+<div class="section" id="o3">
+<h3>O3<a class="headerlink" href="#o3" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="classify">
+<h2>Classify<a class="headerlink" href="#classify" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="c1">
+<h3>C1<a class="headerlink" href="#c1" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="besprechungen.html" class="btn btn-neutral float-right" title="Besprechungsnotizen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="README_app.html" class="btn btn-neutral float-left" title="Docker Version of Feature Generator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Dylan, Francesco.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
