@@ -3,14 +3,14 @@ Feature Generator Documentation
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Installation and Innitialization
 
     docs/README_app
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Pipeline Scenario
 
     docs/README_V1
@@ -18,7 +18,7 @@ Feature Generator Documentation
 
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Entwicklungs-Protokoll
 
 	docs/protokoll
