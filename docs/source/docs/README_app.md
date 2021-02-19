@@ -10,9 +10,6 @@ e.g.:
  cd .../Feature_Generator
  ```
 
-Build docker image from docker file:
-
-
 
 ## Docker Build - Installation
 
