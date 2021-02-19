@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Explanation Feature Generator Pipeline
+=======
+# Feature Generator Pipeline
+>>>>>>> main
 
 In the following, find a basic configuration for a pipeline that trains an activ learning classifier for user specified annotation of articles into topics. 
 
@@ -7,7 +11,11 @@ In the following, find a basic configuration for a pipeline that trains an activ
 
 
 
+<<<<<<< HEAD
 ## The Pipeline Procedure
+=======
+## Main file: *feature_generator_Part1.py*
+>>>>>>> main
 
 Open file *feature_generator_Part1.py*. It calls the various functions needed, and stores the returned dataframes into csv files. In the following only the functions are described.  
 
@@ -93,6 +101,10 @@ Run python script `feature_generator_Part2`, which reads the annotated tables.
 
 #### C.classify(label_column_name: Str, *args: List[Str])
 > **takes:** a label column on which the classifier is trained, followed by several specified columns for classifier features
+<<<<<<< HEAD
 
 > **returns:** None
 > **output:** csv table in *files/labeled_timestamp.csv*
+=======
+> **returns:** None
+>>>>>>> main

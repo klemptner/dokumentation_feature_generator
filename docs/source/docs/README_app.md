@@ -1,4 +1,5 @@
 # Installation and Innitialization of Docker Image
+<<<<<<< HEAD
 In order to execute the following, you need to have installed *docker*. [Link to docker documentation](https://docs.docker.com/engine/install/ubuntu/)
 
 ## Docker Build - Installation
@@ -11,6 +12,16 @@ e.g.:
 
 Build docker image from docker file:
 
+=======
+
+
+## Docker Build - Installation
+
+In terminal navigate to *Feature_Generator* directory.
+e.g.: ```cd .../Feature_Generator```
+
+Build docker image from docker file:
+>>>>>>> main
 ```
 docker build -t feature_generator .
 ```
