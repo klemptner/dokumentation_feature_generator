@@ -33,7 +33,7 @@ Execute the following command:
 ```
 python3 feature_generator_Part1.py
 ```
-This will execute Part 1 of the pipeline. After annotation of the two tables, run:
+This will execute Part 1 of the pipeline :ref: 'Explanation Feature Generator Pipeline'. After annotation of the two tables, run:
 
 ```
 python3 feature_generator_Part2.py
