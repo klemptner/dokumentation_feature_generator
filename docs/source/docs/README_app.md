@@ -11,6 +11,15 @@ e.g.:
 
 Build docker image from docker file:
 
+
+
+## Docker Build - Installation
+
+In terminal navigate to *Feature_Generator* directory.
+e.g.: ```cd .../Feature_Generator```
+
+Build docker image from docker file:
+>>>>>>> main
 ```
 docker build -t feature_generator .
 ```
@@ -23,7 +32,6 @@ Execute in terminal:
 ```
 docker run -it --rm -v $PWD:/app feature_generator
 ```
-Now, in the docker console, run:
 ```
 pip install -e .
 ```
@@ -38,3 +46,5 @@ This will execute Part 1 of the pipeline. After annotation of the two tables, ru
 ```
 python3 feature_generator_Part2.py
 ```
+
+Now, in the docker console, run:
