@@ -3,15 +3,16 @@ Feature Generator Documentation
 
 .. toctree::
     :maxdepth: 4
-    :caption: Package
+    :caption: Use as Python-Package
 
     docs/README_V1
 
 
 
 .. toctree::
+    :hidden:
     :maxdepth: 4
-    :caption: Docker Image
+    :caption: Use as Docker Image
 
     docs/README_app
 

@@ -6,37 +6,43 @@ This file will first explain how to install the package and its dependencies. An
 ## Installation
 
 Save _Feature_Generator_ at any location. In a terminal navigate to the specified location. To install the package and all dependencies, use command:
-    
-     pip install -e .
 
-## Pipeline
+```
+pip install -e .
+```
 
+## Standard Pipeline
+### Main file: *feature_generator_Part1.py*
 
-### Part 1:
+Open file *feature_generator_Part1.py*. It calls the various functions needed, and stores the returned dataframes into csv files. In the following only the functions are described.  
 
 The following variables can be set in *feature_generator_Part1.py*, which is the procedure for the main pipeline.
 
 > article_df
 
-*article_df* ist the path of the origin file for the pipeline.
+*article_df* stores the path of the origin file for the pipeline.
 
 > mallet_path
 
-Path to the installation of mallet LDA. Default case is _feature_generator/utils/mallet/bin_ change it if a mallet installation already exists on system. 
+This stores the path to the installation of mallet LDA. Default case is *feature_generator/utils/mallet/bin*,change it if a mallet installation already exists on system. 
 
-The pipeline follows the following procedures by calling several functions. Only variable `article_df` needs to be changed. All other filepaths are predefined in default values such that the standard pipeline works.
+### Part 1:
+
+The pipeline follows the following procedures by calling several functions. Only variable `article_df` needs to be changed. All other filepaths are predefined in default values such that the standard pipeline works. All files are stored in folder *files*. This includes *Mallet*, which is also included in the package under *utils/mallet*.
 
 #### P1.preprocess(df: pandas.DataFrame)
 
-> takes: The dataframe from variable `article_df` with column names "Text", "TopicDD", "LanguageDD"
->
-> returns: A preprocessed dataframe P1_df
+takes: | The dataframe from variable `article_df`. Required are column names "Text", "TopicDD", "LanguageDD"
+
+returns: | A preprocessed dataframe P1_df, text is cleared of `\n` characters.
+
+
 
 
 #### I2.embeddings(path: Str, article_len: Int)
-> takes: A path to a csv saved within the file system with a text column
+> takes: A path to a csv saved within the file system before with a text column.
 > 
-> returns: A dataframe with additional columns "dim" and "reduced_dim", where dim are the embeddings of a RobERTa Language model
+> returns: A dataframe with additional columns "dim" and "reduced_dim", where dim are the embeddings of a Roberta Language model.
 > 
 > and "reduced_dim" is the reduced space, for processing on algorithms that don't take high-dimensional data
 
