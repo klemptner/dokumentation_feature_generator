@@ -1,5 +1,5 @@
 # Installation and Innitialization of Docker Image
-In order to execute the following, you need to have installed *docker*. [Link to docker documentation](https://docs.docker.com/engine/install/ubuntu/)
+In order to execute the following, you need to have installed *docker*. [Download Docker](https://www.docker.com/products/docker-desktop)
 
 ## Docker Build - Installation
 
