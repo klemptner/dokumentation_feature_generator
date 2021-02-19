@@ -4,6 +4,7 @@ In order to execute the following, you need to have installed *docker*. [Link to
 ## Docker Build - Installation
 
 In terminal navigate to *Feature_Generator* directory.
+
 e.g.:
  ```
  cd .../Feature_Generator
