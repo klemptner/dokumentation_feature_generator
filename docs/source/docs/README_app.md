@@ -10,12 +10,6 @@ e.g.:
  cd .../Feature_Generator
  ```
 
-
-## Docker Build - Installation
-
-In terminal navigate to *Feature_Generator* directory.
-e.g.: ```cd .../Feature_Generator```
-
 Build docker image from docker file:
 ```
 docker build -t feature_generator .
