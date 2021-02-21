@@ -37,5 +37,3 @@ This will execute Part 1 of the pipeline. After annotation of the two tables, ru
 ```
 python3 feature_generator_Part2.py
 ```
-
-Now, in the docker console, run:
