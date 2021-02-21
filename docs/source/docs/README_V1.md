@@ -19,7 +19,7 @@ The following variables can be set in *feature_generator_Part1.py*, which is the
 
 > mallet_path
 
-This stores the path to the installation of mallet LDA. Default case is *feature_generator/utils/mallet/bin*,change it if a mallet installation already exists on system. 
+This stores the path to the installation of mallet LDA. Default case is *feature_generator/utils/mallet/bin*, change it if a mallet installation already exists on system. 
 
 ### Part 1:
 
