@@ -78,7 +78,7 @@ This function can be used instead of `O2.create_tables_for_annotation()`. It pro
 
 - **O2.create_tables_for_annotation()**
 > **takes:** implicit CSVs from LDA and Unsupervised HDBScan Clustering that were stored in *files* folder earlier.
-> **returns:** 2 dataframes for the purpose of the annotation: *O2_df_annotation_hdbscan.csv* , *O2_df_annotation_lda.csv*
+> **returns:** 2 dataframes for the purpose of the annotation: *Part_1_hdbscan_results.csv* , *Part_1_lda_results.csv*
 
 The column to be annotated is `User_Annotation` in both files. In this first manual annotation round all clusters resulting from the unsupervised methods need to be assigned to the user's own topic system, which is preferably coded in int numbers. This encoding is later required for the active learning classifier in section **C**. 
 
