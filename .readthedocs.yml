@@ -18,5 +18,5 @@ python:
    version: 3.7
    install:
    - requirements: docs/requirements.txt
-   
-   
+
+google_analytics: ['G-E07MCEGDJQ', 'dokumentation-feature-generator.readthedocs.io/en/latest/']
