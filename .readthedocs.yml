@@ -20,5 +20,5 @@ python:
    - requirements: docs/requirements.txt
 
 
-google_analytics: ['G-E07MCEGDJQ', 'dokumentation-feature-generator.readthedocs.io/en/latest/']
+#google_analytics: ['G-E07MCEGDJQ', 'dokumentation-feature-generator.readthedocs.io/en/latest/']
 
