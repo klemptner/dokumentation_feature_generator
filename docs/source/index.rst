@@ -4,16 +4,17 @@ Feature Generator Documentation
 
 .. toctree::
     :maxdepth: 1
-    :caption: Installation and Innitialization
+    :caption: Pipeline Scenario
 
-    docs/README_app
+    docs/README_V1
+
 
 
 .. toctree::
     :maxdepth: 1
-    :caption: Pipeline Scenario
+    :caption: Installation and Innitialization
 
-    docs/README_V1
+    docs/README_app
 
 
 
