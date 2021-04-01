@@ -91,13 +91,9 @@ Run python script `feature_generator_Part2`, which reads the annotated tables.
 
 #### C1.classify(label_column_name: Str, n_suggest: Int, *args: List[Str])
 > **takes:**  a label column on which the classifier is trained, Int for number of suggestions per active learning iteration, followed by several specified columns for classifier features, as many as desired can be added.
-<<<<<<< HEAD
 >
 > **parameters (for args):** *reduced_dim*, *LDA_Dominant_Topic*
-=======
->>>>>>> main
 >
-> **parameters (for args):** *reduced_dim*, *LDA_Dominant_Topic*
 > **returns:** None
 >
 > **output:** csv table in *files/labeled_timestamp.csv*
