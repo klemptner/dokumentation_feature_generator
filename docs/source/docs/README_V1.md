@@ -89,8 +89,11 @@ Run python script `feature_generator_Part2`, which reads the annotated tables.
 >
 > **returns:** applied user annotated topics for each cluster to each text in a single dataframe `O3_df_articles.csv`
 
-#### C.classify(label_column_name: Str, *args: List[Str])
-> **takes:** a label column on which the classifier is trained, followed by several specified columns for classifier features
+#### C1.classify(label_column_name: Str, n_suggest: Int, *args: List[Str])
+> **takes:**  a label column on which the classifier is trained, Int for number of suggestions per active learning iteration, followed by several specified columns for classifier features, as many as desired can be added.
+>
+> **parameters (for args):** *reduced_dim*, *LDA_Dominant_Topic*
 >
 > **returns:** None
+>
 > **output:** csv table in *files/labeled_timestamp.csv*
