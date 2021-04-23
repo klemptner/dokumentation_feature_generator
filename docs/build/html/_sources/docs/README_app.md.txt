@@ -1,22 +1,14 @@
 # Installation and Innitialization of Docker Image
-In order to execute the following, you need to have installed *docker*. [Link to docker documentation](https://docs.docker.com/engine/install/ubuntu/)
+In order to execute the following, you need to have installed *docker*. [Download Docker](https://www.docker.com/products/docker-desktop)
 
 ## Docker Build - Installation
 
 In terminal navigate to *Feature_Generator* directory.
+
 e.g.:
  ```
  cd .../Feature_Generator
  ```
-
-Build docker image from docker file:
-
-
-
-## Docker Build - Installation
-
-In terminal navigate to *Feature_Generator* directory.
-e.g.: ```cd .../Feature_Generator```
 
 Build docker image from docker file:
 ```
@@ -45,5 +37,3 @@ This will execute Part 1 of the pipeline. After annotation of the two tables, ru
 ```
 python3 feature_generator_Part2.py
 ```
-
-Now, in the docker console, run:
